@@ -7,7 +7,7 @@ const body = require("../outputs/body");
 
 const router = express.Router();
 
-router.get("/check_email", async (req, res) => {
+router.post("/check_email", async (req, res) => {
   if (!req.body.email)
     return res
       .status(400)
