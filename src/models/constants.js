@@ -5,4 +5,5 @@ module.exports = {
   emailMaxLength: 255,
   passwordMinLength: 7,
   passwordMaxLength: 1024,
+  timeGoalMin: 5,
 };

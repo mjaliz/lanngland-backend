@@ -91,10 +91,7 @@ const schema = Joi.object({
     .min(constants.stringMinLength)
     .max(constants.stringMaxLength)
     .required(),
-  timeGoal: Joi.string()
-    .min(constants.stringMinLength)
-    .max(constants.stringMaxLength)
-    .required(),
+  timeGoal: Joi.number().min(constants.timeGoalMin).required(),
   age: Joi.string()
     .min(constants.stringMinLength)
     .max(constants.stringMaxLength)
