@@ -29,8 +29,10 @@ const userSchema = new mongoose.Schema({
     maxlength: constants.stringMaxLength,
   },
   timeGoal: {
-    type: Number,
+    type: String,
     required: true,
+    minlength: constants.stringMinLength,
+    maxlength: constants.stringMaxLength,
   },
   age: {
     type: String,
@@ -91,7 +93,10 @@ const schema = Joi.object({
     .min(constants.stringMinLength)
     .max(constants.stringMaxLength)
     .required(),
-  timeGoal: Joi.number().min(constants.timeGoalMin).required(),
+  timeGoal: Joi.string()
+    .min(constants.stringMinLength)
+    .max(constants.stringMaxLength)
+    .required(),
   age: Joi.string()
     .min(constants.stringMinLength)
     .max(constants.stringMaxLength)
